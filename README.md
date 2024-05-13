@@ -1,0 +1,1 @@
+# -lambda-serverless-video-thumbnails

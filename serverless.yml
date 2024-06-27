@@ -1,0 +1,20 @@
+service: generatethumbnail
+
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  role: your aws role e.g arn:aws:iam::123:role/serverless-role
+
+  functions:
+    handler: video.handler
+    timeout: 30
+    memorySize: 256
+    events:
+      - http:
+          path: /handler
+          method: post
+
+plugins:
+  - serverless-offline
